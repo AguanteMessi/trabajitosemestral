@@ -1,0 +1,33 @@
+   body {
+
+    background-image: url("img/sun-pattern.jpg");
+
+    }
+
+    footer {
+
+    background-color: #CA6510;
+    padding: 25px;
+
+    }
+
+
+    footer i {
+        font-size: 30px;
+    }
+
+    .carousel-caption {
+
+    background-color: rgb(202, 101, 16, 0.7);
+    border-radius: 1rem;
+
+    }
+
+    #carrusel {
+
+    margin: 30px auto 30px;
+    
+    }
+
+
+    
