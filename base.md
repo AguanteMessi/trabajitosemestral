@@ -64,77 +64,62 @@
         </div>
       </nav>
 
-          <h2>   Inicia sesión</h2>
-          <form action="#" method="post">
-            <label for="tx_name"><h6>Nombre</h6></label>
-            <input type="tx_name" id="tx_name">
-            <br>
-            <br>
-        <label for="tx_pass"><h6>Contraseña</h6></label>
-        <input type="password" name="tx_pass" id="tx_pass">
-        <br>
-        <button type="button" class="btn btn-primary">login</button>
-        <br>
-            <a href="#" class="forgetpw">¿olvidaste tu contraseña?</a>
-        
-          </form>
-          
-    <footer class="footer">
+      <!-- AQUI PONER EL CODIGO -->
+      
+    <footer class="container-fluid-lg text-center">
 
-        <div class="row justify-content-around text-light">
-  
-          <div class="col-md-4 my-auto">
-          
-              <h3>Desarrollado por:</h3>
-              
-              <h6>Pedro San Martín <br>
-              Camilo Silva <br>
-              Luis Salamanca</h6>
-              <br>
-              <h5>2022 &copy Todos los derechos reservados</h5>
-          
-        </div>
-          
-        <div class="col-md-2 my-auto">
-          <img src="img/logo.png" alt="Tiendita" height="150px" >
-        </div>
-  
-        <div class="col-md-2 my-auto">
-  
-           <div class="row">
-            <div class="col-6">
-              <a href="https://www.facebook.com/Maceteao-106967318648757" alt="fb" class="text-reset"><i class="bi bi-facebook"></i>
-              </a>
+      <div class="row justify-content-around text-light">
+
+        <div class="col-md-4 my-auto">
+        
+            <h3>Desarrollado por:</h3>
+            
+            <h6>Pedro San Martín <br>
+            Camilo Silva <br>
+            Luis Salamanca</h6>
+            <br>
+            <h5>2022 &copy Todos los derechos reservados</h5>
+        
       </div>
-  
-      <div class="row">
-        <div class="col-6">
-            <a href="https://twitter.com/MaceteaoJ"  alt="fb" class="text-reset"><i class="bi bi-twitter"></i>
-            </a>
-          </div>
+        
+      <div class="col-md-2 my-auto">
+        <img src="img/logo.png" alt="Tiendita" height="150px" >
       </div>
-      
-      </div>
-      
-      <div class="row">
+
+      <div class="col-md-2 my-auto">
+
+         <div class="row">
           <div class="col-6">
-              <a href="https://www.instagram.com/maceteaoj/" alt="fb" class="text-reset"><i class="bi bi-instagram"></i>
-              </a>
-  
-          
-          </div>
-              
-        </div> 
-  
-        
+            <a href="https://www.facebook.com/Maceteao-106967318648757" alt="fb" class="text-reset"><i class="bi bi-facebook"></i>
+            </a>
+    </div>
+
+    <div class="row">
+      <div class="col-6">
+          <a href="https://twitter.com/MaceteaoJ"  alt="fb" class="text-reset"><i class="bi bi-twitter"></i>
+          </a>
+        </div>
+    </div>
+    
+    </div>
+    
+    <div class="row">
+        <div class="col-6">
+            <a href="https://www.instagram.com/maceteaoj/" alt="fb" class="text-reset"><i class="bi bi-instagram"></i>
+            </a>
+
         
         </div>
-  
-      </footer>
-        
-  
-      <script src="bootstrap/js/bootstrap.min.js"></script>
-  </body>
-    
-  </body>
+            
+      </div> 
+
+      
+      
+      </div>
+
+    </footer>
+      
+
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+</body>
 </html>
