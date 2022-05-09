@@ -110,7 +110,11 @@
 
         
         </div>
-            
+
+        <div class="row">
+         <div class="col-6">
+            <a href="https://www.youtube.com/channel/UC9KNTXNAXrCTZnNxFkfCqnw" alt="fb" class="text-reset"><i class="bi bi-instagram"></i>
+            </a>
       </div> 
 
       
