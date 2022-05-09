@@ -30,21 +30,33 @@ body {
     }
 
     #tx_pass{
-        border: 5px solid sienna ;
+        border: 3px solid sienna ;
+        color: white;
 
     }
     #tx_name{
-        border: 5px solid sienna;
+        border: 3px solid sienna;
+        color: white;
+    }
+    #tx_correo{
+        border: 3px solid sienna;
+        color: white;
+    }
+    #tx_confpass{
+        border: 3px solid sienna;
+        color: white;
     }
 
 
     
     .formulario{
         font-family: 'Secular One', sans-serif;
+        font-size: small;
         margin-left: auto;
         margin-right: auto;
         color: white;
         background: rgba(5, 7, 12, 0.40)
+        
         
     }
     .btnlogin{
