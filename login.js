@@ -1,13 +1,37 @@
 const nombre = document.getElementById("name")
-const contraseña = document.getElementById("pasa")
+const contraseña = document.getElementById("pass")
 const correo = document.getElementById("email")
 const confcontraseña = document.getElementById("confpass")
 const formulario = document.getElementById("formulario")
-const parrafo= document.getElementById("warning")
+const parrafo = document.getElementById("warnings")
 form.addEventListener("submit",e=>{
-    e.preventDefault
-    if (nombre.value.length<6) {
-        alert("Nombre muy corto")
+    e.preventDefault()
+    let warnings=""
+    let entrar = false
+    let regexemail= /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/
+    parrafo.innerHTML = ""
+    if (nombre.value.length<6) {    
+        warnings+= `El Nombre debe contener un minimo de 6 caracteres <br> `
+        entrar=true
     
 }
+    console.log(regexemail.test(email.value))
+    if (!regexemail.test(email.value)) {
+        warnings+= `El email no es valido <br> `
+        entrar= true
+        
+    }
+    if (pass.value.length < 6) {
+        warnings+= `la contraseña debe contener un minimo de 6 caracteres <br> `
+        entrar = true
+    }
+    if (confpass != pass) {
+        warnings+= `Contraseñas no coinciden <br> `
+        entrar = true
+    }
+    if (entrar) {
+        parrafo.innerHTML = warnings
+        
+    }
+
 })
