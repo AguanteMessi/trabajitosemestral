@@ -25,7 +25,7 @@ form.addEventListener("submit",e=>{
         warnings+= `la contraseña debe contener un minimo de 6 caracteres <br> `
         entrar = true
     }
-    if (confpass != pass) {
+    if (pass.value !== confpass.value) {
         warnings+= `Contraseñas no coinciden <br> `
         entrar = true
     }
