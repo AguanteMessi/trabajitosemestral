@@ -74,11 +74,11 @@
 
         <div id="api1">
         <div>
-          <script class="white">
+          <script>
             $.getJSON('https://mindicador.cl/api', function(data) {
               var dailyIndicators = data;
               $("<h1/>", {
-                  html: 'El valor actual del Dólar es $' + dailyIndicators.dolar_intercambio.valor
+                  html: 'El valor actual del Dólar es $' + dailyIndicators.dolar.valor
               }).appendTo("body");
           }).fail(function() {
               console.log('Error al consumir la API!');
