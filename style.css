@@ -1,6 +1,10 @@
-   body {
+body {
 
     background-image: url("img/sun-pattern.jpg");
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 
     }
 
@@ -29,5 +33,14 @@
     
     }
 
+    #tx_pass{
+        border: 5px solid sienna ;
 
-    
+    }
+    #tx_name{
+        border: 5px solid sienna;
+    }
+    .footer{
+        margin-top: auto;
+
+    }
