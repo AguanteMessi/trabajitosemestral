@@ -1,56 +1,60 @@
 body {
-
-    background: linear-gradient(rgba(5, 7, 12, 0.75),rgba(5, 7, 12, 0.75)),
-    url("img/1291273.jpeg");
+    background: linear-gradient(rgba(5, 7, 12, 0.75), rgba(5, 7, 12, 0.75)), url("img/1291273.jpeg");
     margin: 0;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    
+}
 
-    }
+footer i {
+    font-size: 30px;
+}
 
-
-
-    footer i {
-        font-size: 30px;
-    }
-
-    .carousel-caption {
-
+.carousel-caption {
     background-color: rgb(202, 101, 16, 0.7);
     border-radius: 1rem;
+}
 
-    }
-
-    #carrusel {
-
+#carrusel {
     margin: 30px auto 30px;
-    
-    }
+}
 
-    #tx_pass{
-        border: 5px solid sienna ;
+#pass {
+    border: 0.5px solid sienna;
+    color: white;
+}
 
-    }
-    #tx_name{
-        border: 5px solid sienna;
-    }
+#name {
+    border: 0.5px solid sienna;
+    color: white;
+}
 
+#email {
+    border: 0.5px solid sienna;
+    color: white;
+}
 
-    
-    .formulario{
-        font-family: 'Secular One', sans-serif;
-        margin-left: auto;
-        margin-right: auto;
-        color: white;
-        background: rgba(5, 7, 12, 0.40)
-        
-    }
-    .btnlogin{
-        background-color: rgb(202, 101, 16, 0.7);
-        color: white;
-    }
-    .input{
-        background: rgba(5, 7, 12, 0.30)
-    }
+#confpass {
+    border: 0.5px solid sienna;
+    color: white;
+}
+
+.form {
+    font-family: 'Secular One', sans-serif;
+    font-size: small;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    background: rgba(5, 7, 12, 0.40)
+}
+.input {
+    background: rgba(5, 7, 12, 0.30)
+}
+
+.warnings {
+    width: 200px;
+    text-align: center;
+    margin: auto;
+    color: red;
+    padding-top: 20px;
+}
