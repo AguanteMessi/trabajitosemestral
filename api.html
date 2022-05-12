@@ -1,21 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" >
-    <link rel="stylesheet" href="style.css">
-    <title>Maceteao - Artículos para jardín</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" >
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="apistyle.css">
+  <link rel="stylesheet" href="stylelogin.css">
+  <title>Maceteao - Artículos para jardín</title>
+  <link rel="icon" type="image/x-icon" href="img/flor.png" >
     <link rel="icon" type="image/x-icon" href="img/flor.png" >
   <link href='https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons' rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/@mdi/font@5.x/css/materialdesignicons.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
-  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
 </head>
+
 <body>
     <nav class="navbar navbar-expand-xl navbar-dark" style="background-color: 	#008000;">
         <div class="container-fluid">
@@ -44,15 +47,13 @@
                 <a class="nav-link" href="ofertas.html">OFERTAS DEL MES</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="api.html">Gatitos</a>
+                <a class="nav-link" href="api.html">VALORES</a>
               </li>
-
-                
-                
+              <li class="nav-item">
               </li>
-              
             </ul>
             
+
             <form class="d-flex">
               <a href="login.html">
               <button type="button" class="btn btn-success">Login</button>
@@ -61,7 +62,7 @@
                 <a href="register.html">
                 <button type="button" class="btn btn-danger">Registrar</button>
                 </a>
-              <a href="comprar.html" class="nav-link">
+              <a href="#" class="nav-link">
                 <img src="img/carrito.png" alt="carrito">
               </a>
               <input class="form-control me-3" type="search" placeholder="Encuentra tu producto" aria-label="Search">
@@ -71,112 +72,76 @@
         </div>
       </nav>
 
-  <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
-  <div id="app">
-    <v-app>
-      <v-content>
-        <v-container>
-          <center><h1>Acá te dejamos imágenes de gatitos =)</h1>
-          <p>para alegrar tu día</p>
-          </center>
-            <v-layout align-center justify-center>
-                <v-btn color="blue" dark large @click="loadNextImage" >
-                    OTRO&nbsp; <v-icon>refresh</v-icon>
-                </v-btn>
-            </v-layout>
-
-            <v-layout row wrap>
-                <v-flex xs12 >
-                <v-card flat tile class="d-flex">
-                    <v-img :src="image.url" contain>
-                    </v-img>
-                </v-card>
-                </v-flex>
-            </v-layout>
-
-        </v-container>
-      </v-content>
-    </v-app>
-  </div>
- 
-  <script>
-    new Vue({ 
-        el: '#app',
-        vuetify: new Vuetify(),
-        data: {
-            image: { url: ""}
-        },
-        created(){
-            this.loadNextImage();
-        } ,
-        methods:{
-            async loadNextImage()
-            {
-                try{
-                    axios.defaults.headers.common['x-api-key'] = "DEMO-API-KEY" // Replace this with your API Key
-
-                    let response = await axios.get('https://api.thecatapi.com/v1/images/search', { params: { limit:1, size:"full" } } ) // Ask for 1 Image, at full resolution
-                    
-                    this.image = response.data[0] // the response is an Array, so just use the first item as the Image
-
-                    console.log("-- Image from TheCatAPI.com")
-                    console.log("id:", this.image.id)
-                    console.log("url:", this.image.url)
-
-                }catch(err){
-                    console.log(err)
-                }
-            }
-        }
-    })
-  </script>
-  <footer class="container-fluid-lg text-center">
-
-    <div class="row justify-content-around text-light">
-
-    <div class="col-md-4 my-auto">
-    
-        <h3>Desarrollado por:</h3>
-        
-        <h6>Pedro San Martín <br>
-        Camilo Silva <br>
-        Luis Salamanca</h6>
-    <br>
-    <h5>2022 &copy Todos los derechos reservados</h5>
-    
-    </div>
-    
-    <div class="col-md-2 my-auto">
-
-      <div class="row">
-        <div class="col-5 icon bg-gradient m-3">
-              <a href="https://www.facebook.com/Maceteao-106967318648757" alt="fb" class="text-reset"><i class="bi bi-facebook"></i>
-              </a>
+        <div id="api1">
+        <div>
+          <script>
+            $.getJSON('https://mindicador.cl/api', function(data) {
+              var dailyIndicators = data;
+              $("<h1/>", {
+                  html: 'El valor actual del Dólar es $' + dailyIndicators.dolar.valor
+              }).appendTo("body");
+          }).fail(function() {
+              console.log('Error al consumir la API!');
+          });
+          </script>
+        </div>
+        <div>
+          <script class="white">
+            $.getJSON('https://mindicador.cl/api', function(data) {
+              var dailyIndicators = data;
+              $("<h1/>", {
+                  html: 'El valor actual de la UF es $' + dailyIndicators.uf.valor
+              }).appendTo("body");
+          }).fail(function() {
+              console.log('Error al consumir la API!');
+          });
+          </script>
+        </div>
+        <div>
+          <script class="white">
+            $.getJSON('https://mindicador.cl/api', function(data) {
+              var dailyIndicators = data;
+              $("<h1/>", {
+                  html: 'El valor actual del Euro es $' + dailyIndicators.euro.valor
+              }).appendTo("body");
+          }).fail(function() {
+              console.log('Error al consumir la API!');
+          });
+          </script>
+        </div>
+        <div>
+          <script class="white">
+            $.getJSON('https://mindicador.cl/api', function(data) {
+              var dailyIndicators = data;
+              $("<h1/>", {
+                  html: 'El valor actual de la UTM es $' + dailyIndicators.utm.valor
+              }).appendTo("body");
+          }).fail(function() {
+              console.log('Error al consumir la API!');
+          });
+          </script>
+          <script class="white">
+            $.getJSON('https://mindicador.cl/api', function(data) {
+              var dailyIndicators = data;
+              $("<h1/>", {
+                  html: 'El valor actual de la Libra es $' + dailyIndicators.libra_cobre.valor
+              }).appendTo("body");
+          }).fail(function() {
+              console.log('Error al consumir la API!');
+          });
+          </script>
+          <script class="white">
+            $.getJSON('https://mindicador.cl/api', function(data) {
+              var dailyIndicators = data;
+              $("<h1/>", {
+                  html: 'El valor actual del Bitcoin es $' + dailyIndicators.bitcoin.valor
+              }).appendTo("body");
+          }).fail(function() {
+              console.log('Error al consumir la API!');
+          });
+          </script>
+        </div>
       </div>
-  
-      <div class="col-5 icon bg-gradient m-3">
-              <a href="https://twitter.com/MaceteaoJ" alt="fb" class="text-reset"><i class="bi bi-twitter"></i>
-              </a>
-           
-      </div>
-      
-      </div>
-      
-      <div class="row">
-        <div class="col-5 icon bg-gradient m-3">
-              <a href="https://www.instagram.com/maceteaoj/" alt="fb" class="text-reset"><i class="bi bi-instagram"></i>
-              </a>
-        </div>      
-    
-      <div class="row">
-        <div class="col-5 icon bg-gradient m-3">
-             <a href="https://www.youtube.com/channel/UC9KNTXNAXrCTZnNxFkfCqnw" alt="fb" class="text-reset"><i class="bi bi-youtube"></i>
-             </a>
 
-     </div> 
-</div>
-
-</footer>
 </body>
 </html>
