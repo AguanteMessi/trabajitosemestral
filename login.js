@@ -21,7 +21,7 @@ form.addEventListener("submit",e=>{
         entrar= true
         
     }
-    if (pass.value.length < 6) {
+    if (pass.value.length < 6 || pass.value===null || pass.value==='' ) {
         warnings+= `la contraseña debe contener un minimo de 6 caracteres <br> `
         entrar = true
     }
