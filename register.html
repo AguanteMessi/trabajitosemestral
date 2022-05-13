@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="stylelogin.css">
+    <title>Maceteao - Artículos para jardín</title>
+    <link rel="icon" type="image/x-icon" href="img/flor.png">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-xl navbar-dark" style="background-color: 	#008000;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/logo.png" alt="Maceteao" width="80" height="80" class="d-inline-block">
+            </a>
+            <span class="navbar-brand">
+                <h1 class="display-6"><b>Maceteao</b></h1>
+              </span>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+            <div class="collapse navbar-collapse" id="navbarScroll">
+                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100x; margin-left: 20px; ">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="productos.html">Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="quienes_somos.html">Quienes somos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ofertas.html">OFERTAS DEL MES</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="api.html">VALORES</a>
+                    </li>
+                    <li class="nav-item">
+
+
+                    </li>
+
+                </ul>
+
+                <form class="d-flex">
+                    <a href="login.html">
+                        <button type="button" class="btn btn-success">Login</button>
+                    </a>
+                    <form class="d-flex">
+                        <a href="register.html">
+                            <button type="button" class="btn btn-danger">Registrar</button>
+                        </a>
+                        <a href="comprar.html" class="nav-link">
+                            <img src="img/carrito.png" alt="carrito">
+                        </a>
+                        <input class="form-control me-3" type="search" placeholder="Encuentra tu producto" aria-label="Search">
+                        <button class="btn btn-outline-light" type="submit">Buscar</button>
+                    </form>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- AQUI PONER EL CODIGO -->
+    <div class="form">
+        <form action="" method="post" id="form" class="form">
+            <h2> Inicia sesión</h2>
+            <label for="tx_name"><h6>Nombre</h6></label>
+            <br>
+            <input class="input" type="name" id="name">
+            <br>
+            <label for="tx_pass"><h6>Contraseña</h6></label>
+            <br>
+            <input class="input" type="password" name="pass" id="pass">
+            <br>
+            <label for="tx_confpass"><h6>Confirmar Contraseña</h6></label>
+            <br>
+            <input class="input" type="password" name="confpass" id="confpass">
+            <br>
+            <label for="tx_correo"><h6>Correo</h6></label>
+            <br>
+            <input class="input" type="email" name="correo" id="email">
+            <br>
+            <button type="submit">registrate</button>
+            <br>
+            <a href="" class="forgetpw">¿olvidaste tu contraseña?</a>
+            <p class="warnings" id="warnings"></p>
+        </form>
+    </div>
+    <script src="login.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+</body>
+
+</html>
