@@ -16,7 +16,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script>
+    function Convertir() {
+        var peso = document.getElementById("peso").value;
+        var dolar = 861.68;
+        var resultado = parseInt(peso) / dolar;
+        alert("Conversión = $" + resultado.toFixed(2));
+        var msg = " ";
+        
+        if (peso == "" ) {
+            msg = '<div class="alert alert-danger" role="alert">' + 
+                'ERROR!' + '</div>'
+        } else {
+            msg = "<h6> Dólares: $" + resultado.toFixed(2) + "</h6>";
+        }
+        document.getElementById("res").innerHTML += msg
+    }
 
+</script>
 </head>
 
 <body>
@@ -72,75 +89,103 @@
         </div>
       </nav>
 
-        <div id="api1">
-        <div>
+        <div id="api1" class="form">
           <script>
             $.getJSON('https://mindicador.cl/api', function(data) {
               var dailyIndicators = data;
-              $("<h1/>", {
+              $("<h2/>", {
                   html: 'El valor actual del Dólar es $' + dailyIndicators.dolar.valor
               }).appendTo("body");
           }).fail(function() {
               console.log('Error al consumir la API!');
           });
           </script>
-        </div>
-        <div>
-          <script class="white">
+        
+          <script>
             $.getJSON('https://mindicador.cl/api', function(data) {
               var dailyIndicators = data;
-              $("<h1/>", {
+              $("<h2/>", {
                   html: 'El valor actual de la UF es $' + dailyIndicators.uf.valor
               }).appendTo("body");
           }).fail(function() {
               console.log('Error al consumir la API!');
           });
           </script>
-        </div>
-        <div>
-          <script class="white">
+        
+          <script>
             $.getJSON('https://mindicador.cl/api', function(data) {
               var dailyIndicators = data;
-              $("<h1/>", {
+              $("<h2/>", {
                   html: 'El valor actual del Euro es $' + dailyIndicators.euro.valor
               }).appendTo("body");
           }).fail(function() {
               console.log('Error al consumir la API!');
           });
           </script>
-        </div>
-        <div>
-          <script class="white">
+        
+          <script>
             $.getJSON('https://mindicador.cl/api', function(data) {
               var dailyIndicators = data;
-              $("<h1/>", {
+              $("<h2/>", {
                   html: 'El valor actual de la UTM es $' + dailyIndicators.utm.valor
               }).appendTo("body");
           }).fail(function() {
               console.log('Error al consumir la API!');
           });
           </script>
-          <script class="white">
+          <script>
             $.getJSON('https://mindicador.cl/api', function(data) {
               var dailyIndicators = data;
-              $("<h1/>", {
+              $("<h2/>", {
                   html: 'El valor actual de la Libra es $' + dailyIndicators.libra_cobre.valor
               }).appendTo("body");
           }).fail(function() {
               console.log('Error al consumir la API!');
           });
           </script>
-          <script class="white">
+          <script >
             $.getJSON('https://mindicador.cl/api', function(data) {
               var dailyIndicators = data;
-              $("<h1/>", {
+              $("<h2/>", {
                   html: 'El valor actual del Bitcoin es $' + dailyIndicators.bitcoin.valor
               }).appendTo("body");
           }).fail(function() {
               console.log('Error al consumir la API!');
           });
           </script>
-        </div>
+          <script >
+            $.getJSON('https://mindicador.cl/api', function(data) {
+              var dailyIndicators = data;
+              $("<h2/>", {
+                  html: 'El valor actual del IVP es $' + dailyIndicators.ivp.valor
+              }).appendTo("body");
+          }).fail(function() {
+              console.log('Error al consumir la API!');
+          });
+          </script>
+          <script >
+            $.getJSON('https://mindicador.cl/api', function(data) {
+              var dailyIndicators = data;
+              $("<h2/>", {
+                  html: 'El porcentaje actual de la tasa de desempleo es %' + dailyIndicators.tasa_desempleo.valor
+              }).appendTo("body");
+          }).fail(function() {
+              console.log('Error al consumir la API!');
+          });
+        </script>
+        <div class="container" id="conversor">
+          <div class="row">
+              <form >
+                  <div class="form-group">
+                      <label for="num1">Pesos</label>
+                      <input type="number" class="form-control" id="peso" name="peso">
+                  </div>
+                  <button onclick="Convertir()" type="button" class="btn btn-success">Convertir a dólares</button>
+              </form>
+              <div id="res">
+                    
+              </div>
+          </div>
       </div>
 
 </body>
