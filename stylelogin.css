@@ -38,6 +38,22 @@ footer i {
     border: 0.5px solid sienna;
     color: white;
 }
+#prices {
+    border: 0.5px solid sienna;
+    color: white;
+}
+#names {
+    border: 0.5px solid sienna;
+    color: white;
+}
+#descr {
+    border: 0.5px solid sienna;
+    color: white;
+}
+#stock {
+    border: 0.5px solid sienna;
+    color: white;
+}
 
 .form {
     font-family: 'Secular One', sans-serif;

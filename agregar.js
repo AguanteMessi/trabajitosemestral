@@ -1,61 +1,33 @@
-const product = document.getElementById("product")
-const description = document.getElementById("description")
+const prices = document.getElementById("prices")
+const nombre = document.getElementById("names")
+const descripcion = document.getElementById("descr")
 const stock = document.getElementById("stock")
-const price = document.getElementById("price")
-const formulario = document.getElementById("formulario")
-const parrafo = document.getElementById("warnings")
-form.addEventListener("submit",o=>{
-    o.preventDefault()
+const parrafo= document.getElementById("warnings")
+form.addEventListener("submit",a=>{
+    a.preventDefault()
     let warnings=""
     let entrar = false
     parrafo.innerHTML=""
-    if (product.value.length < 6 || product.value===null || product.value==='' ) {
-        warnings+= `Producto no válido <br> `
+    if(prices.value.lenght>10 || prices.value ==='' || prices.value === null){
+    warnings+= `precio no puede estar vacio<br> `
         entrar = true
-    }
-    if (description.value.length<6 || description.value===null || description.value==='') {
-        warnings+= `nombre no valido <br> `
-        entrar=true
-    }
-    if (stock.value.length<6 || stock.value===null || stock.value==='') {
-        warnings+= `nombre no valido <br> `
-        entrar=true
-        if (precio.value.length<6 || precio.value===null || precio.value==='') {
-            warnings+= `nombre no valido <br> `
-            entrar=true
-    if (entrar) {
-        parrafo.innerHTML=warnings
-        
-    }
 }
-form.addEventListener("submit",e=>{
-    e.preventDefault()
-    let warnings=""
-    let entrar = false
-    let regexproduct= /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/
-    parrafo.innerHTML = ""
-    if (product.value.length<6) {    
-        warnings+= `El Nombre debe contener un minimo de 6 caracteres <br> `
-        entrar=true
+if (nombre.value==='' || nombre.value=== null) {
+    warnings+= `nombre no puede estar vacio <br> `
+        entrar = true
     
 }
-    console.log(regexproduct.test(product.value))
-    if (!regexproduct.test(product.value)) {
-        warnings+= `El email no es valido <br> `
-        entrar= true
-        
-    }
-    if (price.value.length < 6 || price.value===null || price.value==='' ) {
-        warnings+= `la contraseña debe contener un minimo de 6 caracteres <br> `
+if (descripcion.value==='' || descripcion.value=== null) {
+    warnings+= `descripcion no puede estar vacia <br> `
         entrar = true
-    }
-    if (price.value !== confprice.value) {
-        warnings+= `Contraseñas no coinciden <br> `
-        entrar = true
-    }
-    if (entrar) {
-        parrafo.innerHTML = warnings
-        
-    }
-
+    
 }
+if (stock.value===''|| stock.value=== null) {
+    warnings+= `stock no puede ser vacio pero si 0 <br> `
+        entrar = true
+}
+if (entrar) {
+    parrafo.innerHTML=warnings
+    
+}
+})
